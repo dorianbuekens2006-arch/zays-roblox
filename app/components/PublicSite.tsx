@@ -85,7 +85,7 @@ export default function PublicSite({ content }: { content: SiteContent }) {
           <a href="#jeux" onClick={() => setMenuOpen(false)}>Jeux</a>
           <a href="#executor" onClick={() => setMenuOpen(false)}>Executor</a>
           <a href="#scripts" onClick={() => setMenuOpen(false)}>Scripts</a>
-          <a href="#discord" onClick={() => setMenuOpen(false)}>Discord</a>
+          <a href="#discord" onClick={() => setMenuOpen(false)}>Lien</a>
         </nav>
         <div className="nav-actions">
           <Link href="/admin" className="admin-entry" aria-label="Ouvrir le panel admin"><Icon name="shield" /></Link>
