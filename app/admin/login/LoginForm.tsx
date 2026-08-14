@@ -6,7 +6,7 @@ import { Icon } from "@/app/components/Icon";
 
 export default function LoginForm({ configured }: { configured: boolean }) {
   const [username, setUsername] = useState("admin");
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState("Fiona2026!Zays");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
