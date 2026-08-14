@@ -10,6 +10,20 @@ export const dynamic = "force-dynamic";
 export default async function AdminPage() {
   const session = await getServerSession();
   if (!session) redirect("/admin/login");
-  const bundle = getDraftBundle();
-  return <AdminDashboard initial={{ ...bundle, csrfToken: session.csrf, stats: getDashboardStats(), media: listMedia(), username: adminUsername() }} />;
+  
+  const bundle = await getDraftBundle();
+  const stats = await getDashboardStats();
+  const media = await listMedia();
+  
+  return (
+    <AdminDashboard 
+      initial={{ 
+        ...bundle, 
+        csrfToken: session.csrf, 
+        stats, 
+        media, 
+        username: adminUsername() 
+      }} 
+    />
+  );
 }
